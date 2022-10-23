@@ -13,6 +13,7 @@ namespace I0ZMN2_HFT_2021222.Models
         public int BuyDate { get; set; }
         public string BuyerGender { get; set; }
         public bool IsFirstCar { get; set; }
+        public virtual Car Car { get; set; }
 
     }
 }

@@ -20,7 +20,7 @@ namespace I0ZMN2_HFT_2021222.Models
         public string FuelType { get; set; }
         public bool IsElectricCar { get; set; }
         public virtual ICollection<RentCar> CarRents { get; set; }
-        public Brand CarBrand { get; set; }
+        public virtual Brand CarBrand { get; set; }
         public int BrandId { get; set; }
 
         public Car()
