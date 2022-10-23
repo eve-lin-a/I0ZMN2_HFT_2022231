@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using I0ZMN2_HFT_2021222.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,8 @@ namespace I0ZMN2_HFT_2021222.Repository
 {
     public class CarDBContext: DbContext
     {
+        public virtual DbSet<Brand> Brands { get; set; }
+        public virtual DbSet<Car> Cars { get; set; }
+        public virtual DbSet<RentCar> Rents { get; set; }
     }
 }
