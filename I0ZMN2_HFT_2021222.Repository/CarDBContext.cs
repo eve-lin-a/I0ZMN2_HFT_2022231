@@ -29,7 +29,13 @@ namespace I0ZMN2_HFT_2021222.Repository
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Car>(entity =>
+            {
+                entity.HasOne(t => t.CarBrand)
+                .WithMany(t => t.Cars)
+                .HasForeignKey(t => t.BrandId)
+                .OnDelete(DeleteBehavior.Cascade);
+            });
         }
     }
 }
