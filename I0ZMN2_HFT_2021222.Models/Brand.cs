@@ -11,6 +11,7 @@ namespace I0ZMN2_HFT_2021222.Models
     public class Brand
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string BrandName { get; set; }
         public string BrandCountry { get; set; }
