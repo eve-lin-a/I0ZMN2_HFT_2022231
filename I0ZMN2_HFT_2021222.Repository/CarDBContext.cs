@@ -36,6 +36,26 @@ namespace I0ZMN2_HFT_2021222.Repository
                 .HasForeignKey(t => t.BrandId)
                 .OnDelete(DeleteBehavior.Cascade);
             });
+
+            modelBuilder.Entity<RentCar>(entity =>
+            {
+                entity.HasOne(t => t.Car)
+                .WithMany(t => t.CarRents)
+                .HasForeignKey(t => t.CarId)
+                .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            Brand b1 = new Brand() { Id=1, BrandName="Suzuki", BrandCountry="Japan", BrandYear=1909 };
+
+
+
+            Brand b2 = new Brand() { Id = 2, BrandName = "Toyota", BrandCountry = "Japan", BrandYear = 1909 };
+
+            Brand b3 = new Brand() { Id = 3, BrandName = "Ferrari", BrandCountry = "Italy", BrandYear = 1941 };
+
+            Brand b4 = new Brand() { Id = 3, BrandName = "Porsche", BrandCountry = "Germany", BrandYear = 1931 };
+
+
         }
     }
 }
