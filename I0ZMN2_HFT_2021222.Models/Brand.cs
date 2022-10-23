@@ -14,7 +14,10 @@ namespace I0ZMN2_HFT_2021222.Models
         public int BrandYear { get; set; }
         public virtual ICollection<Car> Cars { get; set; }
 
-
+        public Brand()
+        {
+            Cars=new HashSet<Car>();
+        }
 
     }
 }
