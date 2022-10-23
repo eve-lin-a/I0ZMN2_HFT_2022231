@@ -13,5 +13,15 @@ namespace I0ZMN2_HFT_2021222.Repository
         public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<Car> Cars { get; set; }
         public virtual DbSet<RentCar> Rents { get; set; }
+
+        public CarDBContext()
+        {
+            this.Database.EnsureCreated();
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            
+        }
     }
 }
