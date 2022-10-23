@@ -17,6 +17,13 @@ namespace I0ZMN2_HFT_2021222.Models
         public bool IsLeftWheel { get; set; }
         public string FuelType { get; set; }
         public bool IsElectricCar { get; set; }
-        public virtual ICollection<Car> Cars { get; set; }
+        public virtual ICollection<RentCar> CarRents { get; set; }
+        public Brand CarBrand { get; set; }
+        public int BrandId { get; set; }
+
+        public Car()
+        {
+            CarRents = new HashSet<RentCar>();
+        }
     }
 }
