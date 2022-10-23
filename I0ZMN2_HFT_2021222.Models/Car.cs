@@ -16,7 +16,7 @@ namespace I0ZMN2_HFT_2021222.Models
         public string CarName { get; set; }
         public string CarType { get; set; }
         public int CarPrice { get; set; }
-        public bool NewOrUsed { get; set; }
+        public string NewOrUsed { get; set; }
         public int CarReleaseYear { get; set; }
         public string CarColor { get; set; }
         public int CarSeatNumber { get; set; }

@@ -46,6 +46,55 @@ namespace I0ZMN2_HFT_2021222.Repository
             });
 
             Brand b1 = new Brand() { Id=1, BrandName="Suzuki", BrandCountry="Japan", BrandYear=1909 };
+            //new or used bool rolstringre irva
+            Car c1=new Car() { Id = 1, CarName = "Car1", CarType = "Swift", CarPrice = 1, NewOrUsed = "new", CarReleaseYear = 2000, 
+                CarColor = "black", CarSeatNumber = 4, IsLeftWheel = true, FuelType = "diesel", IsElectricCar = true };
+
+            Car c2 = new Car()
+            {
+                Id = 2,
+                CarName = "Car2",
+                CarType = "Swift",
+                CarPrice = 3,
+                NewOrUsed = "new",
+                CarReleaseYear = 2005,
+                CarColor = "white",
+                CarSeatNumber = 4,
+                IsLeftWheel = false,
+                FuelType = "gasoline",
+                IsElectricCar = true
+            };
+
+            Car c3 = new Car()
+            {
+                Id = 3,
+                CarName = "Car3",
+                CarType = "Ignis",
+                CarPrice = 15,
+                NewOrUsed = "used",
+                CarReleaseYear = 2020,
+                CarColor = "red",
+                CarSeatNumber = 6,
+                IsLeftWheel = false,
+                FuelType = "gasoline",
+                IsElectricCar = false
+            };
+
+            Car c4 = new Car()
+            {
+                Id = 4,
+                CarName = "Car4",
+                CarType = "Vitara",
+                CarPrice = 1,
+                NewOrUsed = "used",
+                CarReleaseYear = 1990,
+                CarColor = "green",
+                CarSeatNumber = 4,
+                IsLeftWheel = false,
+                FuelType = "diesel",
+                IsElectricCar = false
+            };
+
 
 
 
