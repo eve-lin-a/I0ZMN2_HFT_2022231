@@ -45,15 +45,15 @@ namespace I0ZMN2_HFT_2021222.Repository
                 .OnDelete(DeleteBehavior.Cascade);
             });
 
-            Brand b1 = new Brand() { Id=1, BrandName="Suzuki", BrandCountry="Japan", BrandYear=1909 };
+            Brand brand1 = new Brand() { Id=1, BrandName="Suzuki", BrandCountry="Japan", BrandYear=1909 };
             //new or used bool rolstringre irva
-            Car car1=new Car() { Id = 1, CarName = "Car1", CarType = "Swift", CarPrice = 1, NewOrUsed = "new", CarReleaseYear = 2000, 
+            Car car1=new Car() { Id = 1, CarName = "Suzuki Car1", CarType = "Swift", CarPrice = 1, NewOrUsed = "new", CarReleaseYear = 2000, 
                 CarColor = "black", CarSeatNumber = 4, IsLeftWheel = true, FuelType = "diesel", IsElectricCar = true };
 
             Car car2 = new Car()
             {
                 Id = 2,
-                CarName = "Car2",
+                CarName = "Suzuki Car2",
                 CarType = "Swift",
                 CarPrice = 3,
                 NewOrUsed = "new",
@@ -68,7 +68,7 @@ namespace I0ZMN2_HFT_2021222.Repository
             Car car3 = new Car()
             {
                 Id = 3,
-                CarName = "Car3",
+                CarName = "Suzuki Car3",
                 CarType = "Ignis",
                 CarPrice = 15,
                 NewOrUsed = "used",
@@ -83,7 +83,7 @@ namespace I0ZMN2_HFT_2021222.Repository
             Car car4 = new Car()
             {
                 Id = 4,
-                CarName = "Car4",
+                CarName = "Suzuki Car4",
                 CarType = "Vitara",
                 CarPrice = 1,
                 NewOrUsed = "used",
@@ -103,20 +103,62 @@ namespace I0ZMN2_HFT_2021222.Repository
 
 
 
-            Brand b2 = new Brand() { Id = 2, BrandName = "Toyota", BrandCountry = "Japan", BrandYear = 1909 };
+            Brand brand2 = new Brand() { Id = 2, BrandName = "Toyota", BrandCountry = "Japan", BrandYear = 1909 };
 
-            Car c1 = new Car()
+            Car car1b2 = new Car()
             {
-                Id = 1,
-                CarName = "Car1",
-                CarType = "Swift",
-                CarPrice = 1,
+                Id = 5,
+                CarName = "Toyota Car1",
+                CarType = "Yaris",
+                CarPrice = 4,
                 NewOrUsed = "new",
+                CarReleaseYear = 2020,
+                CarColor = "red",
+                CarSeatNumber = 4,
+                IsLeftWheel = false,
+                FuelType = "gasoline",
+                IsElectricCar = true
+            };
+            Car car2b2 = new Car()
+            {
+                Id = 6,
+                CarName = "Toyota Car2",
+                CarType = "Corolla",
+                CarPrice = 1,
+                NewOrUsed = "used",
                 CarReleaseYear = 2000,
-                CarColor = "black",
+                CarColor = "green",
+                CarSeatNumber = 3,
+                IsLeftWheel = true,
+                FuelType = "diesel",
+                IsElectricCar = false
+            };
+            Car car3b2 = new Car()
+            {
+                Id = 7,
+                CarName = "Toyota Car3",
+                CarType = "Yaris",
+                CarPrice = 2,
+                NewOrUsed = "new",
+                CarReleaseYear = 2010,
+                CarColor = "white",
                 CarSeatNumber = 4,
                 IsLeftWheel = true,
                 FuelType = "diesel",
+                IsElectricCar = false
+            };
+            Car car4b2 = new Car()
+            {
+                Id = 8,
+                CarName = "Toyota Car4",
+                CarType = "Sienna",
+                CarPrice = 10,
+                NewOrUsed = "new",
+                CarReleaseYear = 2017,
+                CarColor = "black",
+                CarSeatNumber = 4,
+                IsLeftWheel = true,
+                FuelType = "gasoline",
                 IsElectricCar = true
             };
 
