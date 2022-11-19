@@ -47,10 +47,10 @@ namespace I0ZMN2_HFT_2021222.Repository
 
             Brand b1 = new Brand() { Id=1, BrandName="Suzuki", BrandCountry="Japan", BrandYear=1909 };
             //new or used bool rolstringre irva
-            Car c1=new Car() { Id = 1, CarName = "Car1", CarType = "Swift", CarPrice = 1, NewOrUsed = "new", CarReleaseYear = 2000, 
+            Car car1=new Car() { Id = 1, CarName = "Car1", CarType = "Swift", CarPrice = 1, NewOrUsed = "new", CarReleaseYear = 2000, 
                 CarColor = "black", CarSeatNumber = 4, IsLeftWheel = true, FuelType = "diesel", IsElectricCar = true };
 
-            Car c2 = new Car()
+            Car car2 = new Car()
             {
                 Id = 2,
                 CarName = "Car2",
@@ -65,7 +65,7 @@ namespace I0ZMN2_HFT_2021222.Repository
                 IsElectricCar = true
             };
 
-            Car c3 = new Car()
+            Car car3 = new Car()
             {
                 Id = 3,
                 CarName = "Car3",
@@ -80,7 +80,7 @@ namespace I0ZMN2_HFT_2021222.Repository
                 IsElectricCar = false
             };
 
-            Car c4 = new Car()
+            Car car4 = new Car()
             {
                 Id = 4,
                 CarName = "Car4",
@@ -95,10 +95,34 @@ namespace I0ZMN2_HFT_2021222.Repository
                 IsElectricCar = false
             };
 
+            RentCar rentcar1 = new RentCar() { RentId = 1, BuyerName = "Sanya", BuyDate = 2020, BuyerGender = "male", IsFirstCar = false };
+            RentCar rentcar2 = new RentCar() { RentId = 2, BuyerName = "Viktor", BuyDate = 2022, BuyerGender = "male", IsFirstCar = true };
+            RentCar rentcar3 = new RentCar() { RentId = 3, BuyerName = "Evelin", BuyDate = 2022, BuyerGender = "female", IsFirstCar = true };
+            RentCar rentcar4 = new RentCar() { RentId = 4, BuyerName = "Erzsi", BuyDate = 2018, BuyerGender = "female", IsFirstCar = false };
+
 
 
 
             Brand b2 = new Brand() { Id = 2, BrandName = "Toyota", BrandCountry = "Japan", BrandYear = 1909 };
+
+            Car c1 = new Car()
+            {
+                Id = 1,
+                CarName = "Car1",
+                CarType = "Swift",
+                CarPrice = 1,
+                NewOrUsed = "new",
+                CarReleaseYear = 2000,
+                CarColor = "black",
+                CarSeatNumber = 4,
+                IsLeftWheel = true,
+                FuelType = "diesel",
+                IsElectricCar = true
+            };
+
+
+
+
 
             Brand b3 = new Brand() { Id = 3, BrandName = "Ferrari", BrandCountry = "Italy", BrandYear = 1941 };
 
