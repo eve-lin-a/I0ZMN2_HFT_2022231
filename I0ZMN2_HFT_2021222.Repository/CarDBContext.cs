@@ -162,13 +162,121 @@ namespace I0ZMN2_HFT_2021222.Repository
                 IsElectricCar = true
             };
 
+            Brand brand3 = new Brand() { Id = 3, BrandName = "Ferrari", BrandCountry = "Italy", BrandYear = 1941 };
+            Car car1b3 = new Car()
+            {
+                Id = 9,
+                CarName = "Ferrari Car1",
+                CarType = "Ferrari 488",
+                CarPrice = 10,
+                NewOrUsed = "new",
+                CarReleaseYear = 2011,
+                CarColor = "black",
+                CarSeatNumber = 6,
+                IsLeftWheel = true,
+                FuelType = "gasoline",
+                IsElectricCar = true
+            };
+            Car car2b3 = new Car()
+            {
+                Id = 10,
+                CarName = "Ferrari Car2",
+                CarType = "Ferrari 488",
+                CarPrice = 15,
+                NewOrUsed = "used",
+                CarReleaseYear = 2018,
+                CarColor = "red",
+                CarSeatNumber = 4,
+                IsLeftWheel = true,
+                FuelType = "diesel",
+                IsElectricCar = false
+            };
+            Car car3b3 = new Car()
+            {
+                Id = 11,
+                CarName = "Ferrari Car3",
+                CarType = "Ferrari 458 Italia",
+                CarPrice = 20,
+                NewOrUsed = "new",
+                CarReleaseYear = 2015,
+                CarColor = "white",
+                CarSeatNumber = 4,
+                IsLeftWheel = true,
+                FuelType = "gasoline",
+                IsElectricCar = false
+            };
+            Car car4b3 = new Car()
+            {
+                Id = 12,
+                CarName = "Ferrari Car4",
+                CarType = "Ferrari Portofino",
+                CarPrice = 22,
+                NewOrUsed = "new",
+                CarReleaseYear = 2020,
+                CarColor = "black",
+                CarSeatNumber = 4,
+                IsLeftWheel = false,
+                FuelType = "gasoline",
+                IsElectricCar = true
+            };
 
-
-
-
-            Brand b3 = new Brand() { Id = 3, BrandName = "Ferrari", BrandCountry = "Italy", BrandYear = 1941 };
-
-            Brand b4 = new Brand() { Id = 3, BrandName = "Porsche", BrandCountry = "Germany", BrandYear = 1931 };
+            Brand brand4 = new Brand() { Id = 3, BrandName = "Porsche", BrandCountry = "Germany", BrandYear = 1931 };
+            Car car1b4 = new Car()
+            {
+                Id = 13,
+                CarName = "Porsche Car1",
+                CarType = "Porsche 911",
+                CarPrice = 10,
+                NewOrUsed = "new",
+                CarReleaseYear = 2017,
+                CarColor = "black",
+                CarSeatNumber = 4,
+                IsLeftWheel = true,
+                FuelType = "gasoline",
+                IsElectricCar = true
+            };
+            Car car2b4 = new Car()
+            {
+                Id = 14,
+                CarName = "Porsche Car2",
+                CarType = "Porsche 968 Turbo S",
+                CarPrice = 100,
+                NewOrUsed = "new",
+                CarReleaseYear = 2016,
+                CarColor = "white",
+                CarSeatNumber = 4,
+                IsLeftWheel = false,
+                FuelType = "gasoline",
+                IsElectricCar = true
+            };
+            Car car3b4 = new Car()
+            {
+                Id = 15,
+                CarName = "Porsche Car3",
+                CarType = "Porsche 999",
+                CarPrice = 40,
+                NewOrUsed = "used",
+                CarReleaseYear = 2005,
+                CarColor = "black",
+                CarSeatNumber = 6,
+                IsLeftWheel = true,
+                FuelType = "diesel",
+                IsElectricCar = false
+            };
+            Car car4b4 = new Car()
+            {
+                Id = 16,
+                CarName = "Porsche Car4",
+                CarType = "Porsche 999",
+                CarPrice = 35,
+                NewOrUsed = "new",
+                CarReleaseYear = 2019,
+                CarColor = "red",
+                CarSeatNumber = 4,
+                IsLeftWheel = true,
+                FuelType = "gasoline",
+                IsElectricCar = true
+            };
 
 
         }
