@@ -302,6 +302,11 @@ namespace I0ZMN2_HFT_2022231.Repository
             car3b4.BrandId = brand4.Id;
             car4b4.BrandId = brand4.Id;
 
+            rentcar1.RentId= car1.Id;
+            rentcar2.RentId= car2.Id;
+            rentcar3.RentId= car3b3.Id;
+            rentcar4.RentId= car2b4.Id;
+
 
 
         }
