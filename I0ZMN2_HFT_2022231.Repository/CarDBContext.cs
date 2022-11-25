@@ -281,7 +281,28 @@ namespace I0ZMN2_HFT_2022231.Repository
             modelBuilder.Entity<Car>().HasData(car1, car2, car3, car4, car1b2, car2b2, car3b2, car4b2, car1b3, car2b3, car3b3, car4b3, car1b4, car2b4, car3b4, car4b4);
             modelBuilder.Entity<RentCar>().HasData(rentcar1, rentcar2, rentcar3,rentcar4);
             modelBuilder.Entity<Brand>().HasData(brand1, brand2, brand3, brand4);
-            
+
+            car1.BrandId = brand1.Id;
+            car2.BrandId = brand1.Id;
+            car3.BrandId = brand1.Id;
+            car4.BrandId = brand1.Id;
+
+            car1b2.BrandId = brand2.Id;
+            car2b2.BrandId = brand2.Id;
+            car3b2.BrandId = brand2.Id;
+            car4b2.BrandId = brand2.Id;
+
+            car1b3.BrandId = brand3.Id;
+            car2b3.BrandId = brand3.Id;
+            car3b3.BrandId = brand3.Id;
+            car4b3.BrandId = brand3.Id;
+
+            car1b4.BrandId = brand4.Id;
+            car2b4.BrandId = brand4.Id;
+            car3b4.BrandId = brand4.Id;
+            car4b4.BrandId = brand4.Id;
+
+
 
         }
     }
