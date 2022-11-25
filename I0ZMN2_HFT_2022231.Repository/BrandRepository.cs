@@ -33,8 +33,8 @@ namespace I0ZMN2_HFT_2022231.Repository
 
         public override void Update(Brand t)
         {
-            var carupdate = Get(t.Id);
-            carupdate.BrandName = t.BrandName;
+            var brandupdate = Get(t.Id);
+            brandupdate.BrandName = t.BrandName;
             hpctx.SaveChanges();
         }
     }
