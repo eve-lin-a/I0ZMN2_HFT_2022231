@@ -278,7 +278,10 @@ namespace I0ZMN2_HFT_2022231.Repository
                 IsElectricCar = true
             };
 
-            //modelBuilder.Entity<Car>().HasData(car3b4);
+            modelBuilder.Entity<Car>().HasData(car1, car2, car3, car4, car1b2, car2b2, car3b2, car4b2, car1b3, car2b3, car3b3, car4b3, car1b4, car2b4, car3b4, car4b4);
+            modelBuilder.Entity<RentCar>().HasData(rentcar1, rentcar2, rentcar3,rentcar4);
+            modelBuilder.Entity<Brand>().HasData(brand1, brand2, brand3, brand4);
+            
 
         }
     }
