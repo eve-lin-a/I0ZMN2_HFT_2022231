@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\I0ZMN2_HFT_2021222.Models\I0ZMN2_HFT_2021222.Models.csproj" />
-    <ProjectReference Include="..\I0ZMN2_HFT_2021222.Repository\I0ZMN2_HFT_2021222.Repository.csproj" />
+    <ProjectReference Include="..\I0ZMN2_HFT_2022231.Models\I0ZMN2_HFT_2022231.Models.csproj" />
+    <ProjectReference Include="..\I0ZMN2_HFT_2022231.Repository\I0ZMN2_HFT_2022231.Repository.csproj" />
   </ItemGroup>
 
 </Project>

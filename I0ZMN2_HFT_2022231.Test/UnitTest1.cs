@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace I0ZMN2_HFT_2021222.Test
+namespace I0ZMN2_HFT_2022231.Test
 {
     public class Tests
     {

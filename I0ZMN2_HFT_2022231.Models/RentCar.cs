@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace I0ZMN2_HFT_2021222.Models
+namespace I0ZMN2_HFT_2022231.Models
 {
     public class RentCar
     {

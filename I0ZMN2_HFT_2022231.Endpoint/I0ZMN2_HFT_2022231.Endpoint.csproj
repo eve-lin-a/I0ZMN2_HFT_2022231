@@ -1,7 +1,6 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
@@ -17,7 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\I0ZMN2_HFT_2021222.Models\I0ZMN2_HFT_2021222.Models.csproj" />
+    <ProjectReference Include="..\I0ZMN2_HFT_2022231.Logic\I0ZMN2_HFT_2022231.Logic.csproj" />
+    <ProjectReference Include="..\I0ZMN2_HFT_2022231.Models\I0ZMN2_HFT_2022231.Models.csproj" />
+    <ProjectReference Include="..\I0ZMN2_HFT_2022231.Repository\I0ZMN2_HFT_2022231.Repository.csproj" />
   </ItemGroup>
 
 </Project>

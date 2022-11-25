@@ -1,4 +1,4 @@
-﻿using I0ZMN2_HFT_2021222.Models;
+﻿using I0ZMN2_HFT_2022231.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace I0ZMN2_HFT_2021222.Repository
+namespace I0ZMN2_HFT_2022231.Repository
 {
     public class CarDBContext: DbContext
     {
@@ -278,6 +278,7 @@ namespace I0ZMN2_HFT_2021222.Repository
                 IsElectricCar = true
             };
 
+            //modelBuilder.Entity<Car>().HasData(car3b4);
 
         }
     }

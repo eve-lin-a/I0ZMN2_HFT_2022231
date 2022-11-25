@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace I0ZMN2_HFT_2021222.Client
+namespace I0ZMN2_HFT_2022231.Client
 {
     internal class Program
     {
