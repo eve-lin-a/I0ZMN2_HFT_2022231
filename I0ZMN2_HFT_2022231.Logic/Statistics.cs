@@ -39,11 +39,12 @@ namespace I0ZMN2_HFT_2022231.Logic
 
         //3
 
-        public Car GetMostExpensiveCar()
+        public IList<Car> GetMostExpensiveCar()
         {
             var cars = CarRepo.GetAll();
             Car car = new Car();
             int max = 0;
+            List<Car> list = new List<Car>();
             foreach (var item in cars)
             {
                 if (item.CarPrice>max)
@@ -52,7 +53,8 @@ namespace I0ZMN2_HFT_2022231.Logic
                     car = item;
                 }
             }
-            return car;
+            list.Add(car);
+            return list;
         }
 
         //4
