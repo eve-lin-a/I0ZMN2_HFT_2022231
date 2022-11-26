@@ -34,5 +34,10 @@ namespace I0ZMN2_HFT_2022231.Models
         {
             CarRents = new HashSet<RentCar>();
         }
+
+        //pl branddenként kiirja a kocsik nevét ezt irni a carlogicba . mindig a logicba
+        //pl kiirni brandenként a kocsik nevét, árát, színe vagy akármi.
+
+        //kiirja kocsikat amihezvan rent. et a rencarlogicba
     }
 }

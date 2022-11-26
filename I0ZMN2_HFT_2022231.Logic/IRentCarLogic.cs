@@ -10,7 +10,7 @@ namespace I0ZMN2_HFT_2022231.Logic
     public interface IRentCarLogic
     {
         RentCar GetRentCarById(int id);
-        IEnumerable<RentCar> GetAllBrand();
+        IEnumerable<RentCar> GetAllRentcar();
         void AddNewRentCar(RentCar rentcar);
         void UpdateRentCar(RentCar rentcar);
         void DeleteRentcar(int id);

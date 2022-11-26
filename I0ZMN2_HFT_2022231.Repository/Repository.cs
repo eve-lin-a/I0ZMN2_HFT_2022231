@@ -22,7 +22,7 @@ namespace I0ZMN2_HFT_2022231.Repository
         public abstract T Get(int id);
 
 
-        public IQueryable<T> GetAll()
+        public virtual IQueryable<T> GetAll()
         {
             return hpctx.Set<T>();
         }

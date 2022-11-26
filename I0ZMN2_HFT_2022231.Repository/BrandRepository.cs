@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace I0ZMN2_HFT_2022231.Repository
 {
-    public class BrandRepository : Repository<Brand>, IRepository<Brand>
+    public class BrandRepository : Repository<Brand>, /*IRepository<Brand>,*/ IBrandRepository
     {
         public BrandRepository(CarDBContext hpctx) : base(hpctx)
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace I0ZMN2_HFT_2022231.Repository
 {
-    public class RentCarRepository : Repository<RentCar>, IRepository<RentCar>
+    public class RentCarRepository : Repository<RentCar>, /*IRepository<RentCar>,*/ IRentCarRepository
     {
         public RentCarRepository(CarDBContext hpctx) : base(hpctx)
         {

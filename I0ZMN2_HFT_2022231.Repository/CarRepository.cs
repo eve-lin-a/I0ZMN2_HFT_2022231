@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace I0ZMN2_HFT_2022231.Repository
 {
-    public class CarRepository : Repository<Car>, IRepository<Car>
+    public class CarRepository : Repository<Car>, /*IRepository<Car>,*/ ICarRepository
     {
         public CarRepository(CarDBContext hpctx) : base(hpctx)
         {
@@ -22,8 +22,8 @@ namespace I0ZMN2_HFT_2022231.Repository
 
         public override void Delete(int id)
         {
-            var doctorDelete = Get(id);
-            hpctx.Cars.Remove(doctorDelete);
+            var carDelete = Get(id);
+            hpctx.Cars.Remove(carDelete);
             hpctx.SaveChanges();
         }
 
