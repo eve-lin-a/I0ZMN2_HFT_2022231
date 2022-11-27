@@ -9,8 +9,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\I0ZMN2_HFT_2022231.Logic\I0ZMN2_HFT_2022231.Logic.csproj" />
-  </ItemGroup>
-
 </Project>

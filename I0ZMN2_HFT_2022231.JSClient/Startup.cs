@@ -1,7 +1,3 @@
-using I0ZMN2_HFT_2022231.Endpoint.Services;
-using I0ZMN2_HFT_2022231.Logic;
-using I0ZMN2_HFT_2022231.Models;
-using I0ZMN2_HFT_2022231.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace I0ZMN2_HFT_2022231.Endpoint
+namespace I0ZMN2_HFT_2022231.JSClient
 {
     public class Startup
     {
@@ -29,24 +25,11 @@ namespace I0ZMN2_HFT_2022231.Endpoint
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<CarDBContext>();
-
-            services.AddTransient<IRepository<RentCar>, RentCarRepository>();
-            services.AddTransient<IRepository<Car>, CarRepository>();
-            services.AddTransient<IRepository<Brand>, BrandRepository>();
-
-            services.AddTransient<IRentCarLogic, RentCarLogic>();
-            services.AddTransient<ICarLogic, CarLogic>();
-            services.AddTransient<IBrandLogic, BrandLogic>();
-
-
-            services.AddCors();
-            services.AddSignalR();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "I0ZMN2_HFT_2022231.Endpoint", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "I0ZMN2_HFT_2022231.JSClient", Version = "v1" });
             });
         }
 
@@ -57,17 +40,8 @@ namespace I0ZMN2_HFT_2022231.Endpoint
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "I0ZMN2_HFT_2022231.Endpoint v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "I0ZMN2_HFT_2022231.JSClient v1"));
             }
-
-            app.UseCors(x =>
-                x.AllowCredentials()
-                .AllowAnyHeader()
-                .AllowAnyMethod()
-                .WithOrigins("http://localhost:13104")
-            );
-
-
 
             app.UseRouting();
 
@@ -76,7 +50,6 @@ namespace I0ZMN2_HFT_2022231.Endpoint
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapHub<SignalRHub>("/hub");
             });
         }
     }

@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace I0ZMN2_HFT_2022231.Models
@@ -24,20 +25,17 @@ namespace I0ZMN2_HFT_2022231.Models
         public string FuelType { get; set; }
         public bool IsElectricCar { get; set; }
         [NotMapped]
-        public virtual ICollection<RentCar> CarRents { get; set; }
+        public virtual ICollection<RentCar> RentCars { get; set; }
         [NotMapped]
-        public virtual Brand CarBrand { get; set; }
+        [JsonIgnore]
+        public virtual Brand Brand { get; set; }
         [ForeignKey(nameof (Brand))]
-        public int? BrandId { get; set; }
+        public int? Brand_id { get; set; }
 
         public Car()
         {
-            CarRents = new HashSet<RentCar>();
+            RentCars = new HashSet<RentCar>();
         }
 
-        //pl branddenként kiirja a kocsik nevét ezt irni a carlogicba . mindig a logicba
-        //pl kiirni brandenként a kocsik nevét, árát, színe vagy akármi.
-
-        //kiirja kocsikat amihezvan rent. et a rencarlogicba
     }
 }

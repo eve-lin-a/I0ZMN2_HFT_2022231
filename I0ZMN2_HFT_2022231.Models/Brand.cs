@@ -13,6 +13,8 @@ namespace I0ZMN2_HFT_2022231.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        [MaxLength(100)]
+        [Required]
         public string BrandName { get; set; }
         public string BrandCountry { get; set; }
         public int BrandYear { get; set; }
