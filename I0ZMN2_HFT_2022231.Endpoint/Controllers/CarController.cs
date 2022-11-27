@@ -1,5 +1,4 @@
-﻿using I0ZMN2_HFT_2022231.Endpoint.Services;
-using I0ZMN2_HFT_2022231.Logic;
+﻿using I0ZMN2_HFT_2022231.Logic;
 using I0ZMN2_HFT_2022231.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
@@ -17,12 +16,10 @@ namespace I0ZMN2_HFT_2022231.Endpoint.Controllers
     public class CarController : ControllerBase
     {
         ICarLogic carlogic;
-        IHubContext<SignalRHub> hub;
 
-        public CarController(ICarLogic carlogic, IHubContext<SignalRHub> hub)
+        public CarController(ICarLogic carlogic)
         {
             this.carlogic = carlogic;
-            this.hub = hub;
         }
 
         [HttpGet]
@@ -41,14 +38,12 @@ namespace I0ZMN2_HFT_2022231.Endpoint.Controllers
         public void Post([FromBody] Car value)
         {
             carlogic.Create(value);
-            this.hub.Clients.All.SendAsync("CarCreated", value);
         }
 
         [HttpPut]
         public void Put([FromBody] Car value)
         {
             carlogic.Update(value);
-            this.hub.Clients.All.SendAsync("CarUpdated", value);
         }
 
         [HttpDelete("{id}")]
@@ -56,8 +51,6 @@ namespace I0ZMN2_HFT_2022231.Endpoint.Controllers
         {
             var CarToDelete = this.carlogic.Read(id);
             carlogic.Delete(id);
-            this.hub.Clients.All.SendAsync("CarDeleted", CarToDelete);
-            this.hub.Clients.All.SendAsync("RentCarDeleted", null);
 
         }
     }

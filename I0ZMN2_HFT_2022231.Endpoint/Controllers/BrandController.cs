@@ -1,5 +1,4 @@
-﻿using I0ZMN2_HFT_2022231.Endpoint.Services;
-using I0ZMN2_HFT_2022231.Logic;
+﻿using I0ZMN2_HFT_2022231.Logic;
 using I0ZMN2_HFT_2022231.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
@@ -17,12 +16,10 @@ namespace I0ZMN2_HFT_2022231.Endpoint.Controllers
     public class BrandController : ControllerBase
     {
         IBrandLogic logic;
-        IHubContext<SignalRHub> hub;
 
-        public BrandController(IBrandLogic logic, IHubContext<SignalRHub> hub)
+        public BrandController(IBrandLogic logic)
         {
             this.logic = logic;
-            this.hub = hub;
         }
 
         // GET: api/<BrandController>
@@ -42,14 +39,12 @@ namespace I0ZMN2_HFT_2022231.Endpoint.Controllers
         public void Post([FromBody] Brand value)
         {
             logic.Create(value);
-            this.hub.Clients.All.SendAsync("BrandCreated", value);
         }
 
         [HttpPut]
         public void Put([FromBody] Brand value)
         {
             logic.Update(value);
-            this.hub.Clients.All.SendAsync("BrandUpdated", value);
         }
 
         [HttpDelete("{id}")]
@@ -57,9 +52,6 @@ namespace I0ZMN2_HFT_2022231.Endpoint.Controllers
         {
             var BrandToDelete = this.logic.Read(id);
             logic.Delete(id);
-            this.hub.Clients.All.SendAsync("BrandDeleted", BrandToDelete);
-            this.hub.Clients.All.SendAsync("CarDeleted", null);
-            this.hub.Clients.All.SendAsync("RentCarDeleted", null);
         }
     }
 }
