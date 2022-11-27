@@ -121,7 +121,7 @@ namespace I0ZMN2_HFT_2022231.WPFClient
         {
             if (!IsInDesignMode)
             {
-                Brands = new RestCollection<Brand>("http://localhost:48540/", "Brand", "hub");
+                Brands = new RestCollection<Brand>("http://localhost:13104/", "Brand", "hub");
                 CreateBrand = new RelayCommand(() =>
                 {
                     Brands.Add(new Brand()
@@ -137,7 +137,7 @@ namespace I0ZMN2_HFT_2022231.WPFClient
                 SelectedBrand = new Brand();
 
                 //---------------------------------------------------------------
-                Cars = new RestCollection<Car>("http://localhost:48540/", "Car", "hub");
+                Cars = new RestCollection<Car>("http://localhost:13104/", "Car", "hub");
                 CreateCar = new RelayCommand(() =>
                 {
                     Cars.Add(new Car()
@@ -155,7 +155,7 @@ namespace I0ZMN2_HFT_2022231.WPFClient
                 SelectedCar = new Car();
 
                 //---------------------------------------------------------------
-                RentCars = new RestCollection<RentCar>("http://localhost:48540/", "RentCar", "hub");
+                RentCars = new RestCollection<RentCar>("http://localhost:13104/", "RentCar", "hub");
                 CreateRentCar = new RelayCommand(() =>
                 {
                     RentCars.Add(new RentCar()
