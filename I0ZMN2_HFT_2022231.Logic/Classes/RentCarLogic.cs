@@ -63,6 +63,8 @@ namespace I0ZMN2_HFT_2022231.Logic
         }
         public IEnumerable<RentCar> GetRentCarsAtSuzukiBrand()
         {
+
+
             var q = from RentCars in RentCarRepo.ReadAll()
                     join Cars in CarRepo.ReadAll()
                     on RentCars.Car_id equals Cars.Id
@@ -71,7 +73,7 @@ namespace I0ZMN2_HFT_2022231.Logic
                     where Brands.BrandName == "Suzuki"
                     select RentCars;
 
-            return q;
+            return q.ToList();
         }
         public IEnumerable<RentCar> GetRentCarWhereCarPriceIsOver4()
         {

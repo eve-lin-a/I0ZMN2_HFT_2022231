@@ -25,6 +25,7 @@ namespace I0ZMN2_HFT_2022231.Models
         public string FuelType { get; set; }
         public bool IsElectricCar { get; set; }
         [NotMapped]
+        [JsonIgnore]
         public virtual ICollection<RentCar> RentCars { get; set; }
         [NotMapped]
         [JsonIgnore]

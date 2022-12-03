@@ -72,8 +72,8 @@ namespace I0ZMN2_HFT_2022231.Repository
             Car Car16 = new Car() { Id = 16, CarName = "Porsche Car4", CarType = "Porsche 999", CarPrice = 35, NewOrUsed = "new", CarReleaseYear = 2019, CarColor = "red", CarSeatNumber = 4, IsLeftWheel = true, FuelType = "gasoline", IsElectricCar = true, Brand_id = 4 };
 
             RentCar RentCar1 = new RentCar() { Id = 1, BuyerName = "Sanya", BuyDate = 2020, BuyerGender = "male", IsFirstCar= false, Car_id = 1 };
-            RentCar RentCar2 = new RentCar() { Id = 2, BuyerName = "Erik", BuyDate = 2022, BuyerGender = "male", IsFirstCar = true, Car_id = 2 };
-            RentCar RentCar3 = new RentCar() { Id = 3, BuyerName = "Evelin", BuyDate = 2022, BuyerGender = "female", IsFirstCar = true, Car_id = 3 };
+            RentCar RentCar2 = new RentCar() { Id = 2, BuyerName = "Erik", BuyDate = 2022, BuyerGender = "male", IsFirstCar = true, Car_id = 8 };
+            RentCar RentCar3 = new RentCar() { Id = 3, BuyerName = "Evelin", BuyDate = 2022, BuyerGender = "female", IsFirstCar = true, Car_id = 14 };
             RentCar RentCar4 = new RentCar() { Id = 4, BuyerName = "Erzsi", BuyDate = 2018, BuyerGender = "female", IsFirstCar = false, Car_id = 4 };
 
 

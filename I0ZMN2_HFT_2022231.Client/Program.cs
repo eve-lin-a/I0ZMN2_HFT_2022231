@@ -36,10 +36,10 @@ namespace I0ZMN2_HFT_2022231.Client
         {
             var menu = new ConsoleMenu()
                .Add("Get RentCar at the Suzuki Brand", GetRentCarsAtSuzukiBrand)
-               .Add("Get RentCar where their's Car price is over 200.000.000$", GetRentCarWhereWinIsOverTen)
-               .Add("Get RentCar where their's Car model name is Boeing 787-8", GetRentCarWhereTeamNameIsRoll)
-               .Add("Get Brands where is a RentCar with Canadian nationality", GetBrandtName)
-               .Add("Get Brands where is a RentCar with the last name Cohen", GetBrandtAtTwenty)
+               .Add("Get RentCar where the cars price is over 4K$", GetRentCarWhereCarPriceIsOver4)
+               .Add("Get RentCars where the carss name is Suzuki Car1", GetRentCarsWhereCarModelNameIsSuzukiCar1)
+               .Add("Get Brands where remters name is Sanya", GetBrandWithSanya)
+               .Add("Get Brands where renter is male", GetBrandWhereGenderIsMale)
                .Add("Exit", ConsoleMenu.Close);
             menu.Show();
         }
@@ -268,39 +268,44 @@ namespace I0ZMN2_HFT_2022231.Client
 
         private static void GetRentCarsAtSuzukiBrand()
         {
-            var output = rserv.Get<IEnumerable<RentCar>>("stat/GetRentCarsAtSuzukiBrand");
-            ;
-            //RentCarToConsole(output);
+            var output = rserv.Get<RentCar>("stat/GetRentCarsAtSuzukiBrand");
+            
+            RentCarToConsole(output);
             Console.ReadLine();
         }
-        private static void GetRentCarWhereWinIsOverTen()
+        private static void GetRentCarWhereCarPriceIsOver4()
         {
-            var output = rserv.Get<RentCar>("stat/GetRentCarWhereWinIsOverTen");
+            var output = rserv.Get<RentCar>("stat/GetRentCarWhereCarPriceIsOver4");
             RentCarToConsole(output);
             Console.ReadLine();
         }
 
-        private static void GetRentCarWhereTeamNameIsRoll()
+        private static void GetRentCarsWhereCarModelNameIsSuzuki1()
         {
-            var output = rserv.Get<RentCar>("stat/GetRentCarWhereTeamNameIsRoll");
+            var output = rserv.Get<RentCar>("stat/GetRentCarsWhereCarModelNameIsSuzuki1");
             RentCarToConsole(output);
             Console.ReadLine();
         }
-        private static void GetBrandtName()
+        private static void GetRentCarsWhereCarModelNameIsSuzukiCar1()
         {
-            var output = rserv.Get<Brand>("stat/GetBrandtName");
+            var output = rserv.Get<Brand>("stat/GetRentCarsWhereCarModelNameIsSuzukiCar1");
             BrandToConsole(output);
             Console.ReadLine();
         }
-        private static void GetBrandtAtTwenty()
+        private static void GetBrandWithSanya()
         {
-            var output = rserv.Get<Brand>("stat/GetBrandtAtTwenty");
+            var output = rserv.Get<Brand>("stat/GetBrandWithSanya");
             BrandToConsole(output);
             Console.ReadLine();
         }
 
 
-
+        private static void GetBrandWhereGenderIsMale()
+        {
+            var output = rserv.Get<Brand>("stat/GetBrandWhereGenderIsMale");
+            BrandToConsole(output);
+            Console.ReadLine();
+        }
 
 
 

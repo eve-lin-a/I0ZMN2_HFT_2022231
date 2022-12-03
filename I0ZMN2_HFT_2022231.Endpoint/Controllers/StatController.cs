@@ -34,7 +34,7 @@ namespace I0ZMN2_HFT_2022231.Endpoint.Controllers
             return rentcarlogic.GetRentCarWhereCarPriceIsOver4();
         }
         [HttpGet]
-        public IEnumerable<RentCar> GetRentCarsWhereCarModelNameIsSuzuki1()
+        public IEnumerable<RentCar> GetRentCarsWhereCarModelNameIsSuzukiCar1()
         {
             return rentcarlogic.GetRentCarsWhereCarModelNameIsSuzukiCar1();
         }

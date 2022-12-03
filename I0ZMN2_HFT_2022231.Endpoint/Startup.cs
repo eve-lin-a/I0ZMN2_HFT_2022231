@@ -28,7 +28,7 @@ namespace I0ZMN2_HFT_2022231.Endpoint
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<CarDBContext>();
+            services.AddSingleton<CarDBContext>();
 
             services.AddTransient<IRepository<RentCar>, RentCarRepository>();
             services.AddTransient<IRepository<Car>, CarRepository>();
